@@ -1,0 +1,19 @@
+#!/bin/bash -eu
+
+read -r bazel_version<.bazelversion
+
+readonly bazel_platform="darwin"
+readonly script_root="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../tools"
+readonly bazel_root="$script_root/tmp/bazel/versions/$bazel_version-$bazel_platform"
+readonly bazel_executable="$bazel_root/bin/bazel"
+readonly tulsi_script="tools/tulsiw"
+
+if [[ ! -d $1 ]]; then
+  echo "$0 must be run from the BazelSample directory"
+  exit 1
+fi
+
+echo $bazel_executable
+
+exec "${tulsi_script}" --bazel $bazel_executable \
+    --genconfig "$1:$2"

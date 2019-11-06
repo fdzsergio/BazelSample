@@ -1,0 +1,14 @@
+{
+  "configDefaults" : {
+    "optionSet" : {
+
+    }
+  },
+  "packages" : [
+    "App",
+    "Modules/SwiftLib",
+    "Modules/SwiftLibWithResources"
+  ],
+  "projectName" : "BazelSample",
+  "workspaceRoot" : "../.."
+}

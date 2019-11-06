@@ -1,0 +1,8 @@
+load("//config:custom_rules.bzl", "prebuilt_dynamic_framework")
+
+licenses(["notice"])
+
+prebuilt_dynamic_framework(
+    name = "Nimble",
+    path = "Build/iOS/Nimble.framework",
+)

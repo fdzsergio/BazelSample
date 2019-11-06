@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+set -xo pipefail
+
+if which swiftlint >/dev/null; then
+  /usr/local/bin/swiftlint lint --config ../.swiftlint.yml ../App ../Modules
+else
+  echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+fi

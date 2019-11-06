@@ -1,0 +1,79 @@
+{
+  "additionalFilePaths" : [
+    "App/BUILD",
+    "Modules/SwiftLib/BUILD"
+  ],
+  "buildTargets" : [
+    "//App:Sample",
+    "//App:SampleLibTests",
+    "//Modules/SwiftLib:SwiftLib",
+    "//Modules/SwiftLib:SwiftLibTests",
+    "//Modules/SwiftLibWithResources:SwiftLibWithResources",
+    "//Modules/SwiftLibWithResources:SwiftLibWithResourcesTests"
+  ],
+  "optionSet" : {
+    "BazelBuildOptionsDebug" : {
+      "p" : "--config debug --define environment=develop"
+    },
+    "BazelBuildOptionsRelease" : {
+      "p" : "--config debug --define environment=develop"
+    },
+    "BazelBuildStartupOptionsDebug" : {
+      "p" : "$(inherited)"
+    },
+    "BazelBuildStartupOptionsRelease" : {
+      "p" : "$(inherited)"
+    },
+    "BuildActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "BuildActionPreActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "CommandlineArguments" : {
+      "p" : "$(inherited)"
+    },
+    "LaunchActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "LaunchActionPreActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "PreBuildPhaseRunScript" : {
+      "t" : {
+        "//App:Sample" : "../scripts/lint"
+      }
+    },
+    "ProjectGenerationBazelStartupOptions" : {
+      "p" : "$(inherited)"
+    },
+    "ProjectPrioritizesSwift" : {
+      "p" : "YES"
+    },
+    "SwiftForcesdSYMs" : {
+      "p" : "YES"
+    },
+    "TestActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "TestActionPreActionScript" : {
+      "p" : "$(inherited)"
+    }
+  },
+  "projectName" : "BazelSample",
+  "sourceFilters" : [
+    "App/Resources",
+    "App/Resources/Base.lproj",
+    "App/Sources",
+    "App/Supporting Files",
+    "App/Tests",
+    "Modules",
+    "Modules/SwiftLib",
+    "Modules/SwiftLib/Sources",
+    "Modules/SwiftLib/Tests",
+    "Modules/SwiftLibWithResources",
+    "Modules/SwiftLibWithResources/Resources",
+    "Modules/SwiftLibWithResources/Sources",
+    "Modules/SwiftLibWithResources/Tests"
+  ]
+}

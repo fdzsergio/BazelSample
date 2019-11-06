@@ -1,0 +1,70 @@
+{
+  "additionalFilePaths" : [
+    "App/BUILD",
+    "Modules/SwiftLib/BUILD"
+  ],
+  "buildTargets" : [
+    "//App:Sample",
+    "//App:SampleLib",
+    "//App:SampleLibTests",
+    "//Modules/SwiftLib:SwiftLib",
+    "//Modules/SwiftLib:SwiftLibTests",
+    "//Modules/SwiftLibWithResources:SwiftLibWithResources",
+    "//Modules/SwiftLibWithResources:SwiftLibWithResourcesTests"
+  ],
+  "optionSet" : {
+    "BazelBuildOptionsDebug" : {
+      "p" : "--config release --define environment=production"
+    },
+    "BazelBuildOptionsRelease" : {
+      "p" : "--config release --define environment=production"
+    },
+    "BazelBuildStartupOptionsDebug" : {
+      "p" : "$(inherited)"
+    },
+    "BazelBuildStartupOptionsRelease" : {
+      "p" : "$(inherited)"
+    },
+    "BuildActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "BuildActionPreActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "CommandlineArguments" : {
+      "p" : "$(inherited)"
+    },
+    "EnvironmentVariables" : {
+      "p" : "$(inherited)"
+    },
+    "LaunchActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "LaunchActionPreActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "ProjectGenerationBazelStartupOptions" : {
+      "p" : "$(inherited)"
+    },
+    "TestActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "TestActionPreActionScript" : {
+      "p" : "$(inherited)"
+    }
+  },
+  "projectName" : "BazelSample",
+  "sourceFilters" : [
+    "App",
+    "App/Sources",
+    "App/Supporting Files",
+    "App/Tests",
+    "Modules",
+    "Modules/SwiftLib",
+    "Modules/SwiftLib/Sources",
+    "Modules/SwiftLib/Tests",
+    "Modules/SwiftLibWithResources",
+    "Modules/SwiftLibWithResources/Resources",
+    "Modules/SwiftLibWithResources/Sources"
+  ]
+}
