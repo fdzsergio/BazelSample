@@ -1,9 +1,8 @@
 build \
   --apple_platform_type=ios \
-  --xcode_version=11.2.0 \
   --ios_minimum_os=11.0 \
   --ios_simulator_device="iPhone 11" \
-  --ios_simulator_version=13.2 \
+  --ios_simulator_version=13.3 \
   --verbose_failures \
 
 # During development
@@ -35,7 +34,7 @@ build:release \
 
 # remote server for caching 
 # build \
-#   --remote_cache=http://deploy.local:8088/ \
+#   --remote_cache=http://bazel.local:8088/ \
 #   --repository_cache=~/.cache/bazel
 #   --remote_local_fallback \
 

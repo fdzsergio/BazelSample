@@ -14,14 +14,14 @@
 //  limitations under the License.
 //
 
-@testable import SwiftLib
+@testable import SwiftLibWithResources
 import Nimble
 import XCTest
 
 final class SwiftLibTests: XCTestCase {
 
     func testExample() {
-        expect(Dummy().value).to(beTrue())
+        expect(ViewController()).toNot(beNil())
     }
 
 }

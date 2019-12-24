@@ -4,7 +4,7 @@ set -euo pipefail
 
 read -r bazel_version<.bazelversion
 readonly bazel_platform="darwin"
-readonly bazel_version_sha="eae082635743b753d2df6744bc2f4b7ed6af90c270769ff2f60cd6cebc4b7032"
+readonly bazel_version_sha="3eca4c96cfda97a9d5f8d3d0dec4155a5cc5ff339b10d3f35213c398bf13881e"
 readonly bazel_version_url="https://github.com/bazelbuild/bazel/releases/download/$bazel_version/bazel-$bazel_version-$bazel_platform-x86_64"
 readonly script_root="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly bazel_root="$script_root/tmp/bazel/versions/$bazel_version-$bazel_platform"

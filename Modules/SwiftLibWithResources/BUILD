@@ -4,4 +4,7 @@ licenses(["notice"])
 
 first_party_library(
     name = "SwiftLibWithResources",
+    test_deps = [
+        "//Carthage:Nimble",
+    ]
 )
